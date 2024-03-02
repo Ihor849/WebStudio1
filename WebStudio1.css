@@ -30,13 +30,40 @@ li {
   text-decoration: none;
   list-style: none;
 }
+button {
+  margin: 0;
+  padding: 0;
+  border: inherit;
+  border: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 body {
   display: grid;
   grid-template-rows: 80px auto 252px;
+  align-items: center;
   font-family: Roboto;
   width: 1600px;
 }
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding:0 15px 0 15px;
+}
+
+
 
 .header {
   display: flex;
@@ -51,7 +78,7 @@ body {
   margin: 0 auto;
 
   .link-logo {
-    
+    padding: 25px;
 
     .web,
     .studio {
@@ -66,21 +93,106 @@ body {
   }
 
   .wraper-btn-nav {
-    
     display: flex;
-    margin-left: 93px;
-    gap: 50px;
-
-
+    margin-left: 43px;
+    font-size: 14px;
   }
 
   .item-adress {
-   
     display: flex;
     align-items: center;
-    margin-left: 344px;
-    gap: 50px;
-}
+    margin-left: 321px;
+  }
 }
 
-  
+.item-nav {
+  padding: 25px;
+  cursor: pointer;
+  a {
+    color: var(--font-color-title);
+  }
+}
+.item-nav:hover {
+  a {
+    color: var(--color-hover);
+  }
+}
+
+.section-hero {
+  width: 1600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f303a;
+
+  .title-hero {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .button-link-hero {
+    width: 216px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: var(--logo-color1);
+    cursor: pointer;
+    .link-hero {
+      font-size: 16;
+      font-weight: bold;
+      color: #ffffff;
+      padding: 10px 32px;
+    }
+  }
+  .button-link-hero:hover {
+    background-color: #188ce8;
+  }
+}
+
+.section {
+  padding: 94px 0 94px 0;
+  background-color: var(--section-color-primary);
+
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+.section-title-hidden {
+  padding-bottom: 0;
+}
+
+.list-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  outline: 2px solid blue;
+
+  .card {
+    width: 270px;
+    display: block;
+    flex-wrap: wrap;
+    .subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 14px;
+      color: var(--font-color-primary);
+      line-height: 1.71;
+    }
+  }
+  .card:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+
