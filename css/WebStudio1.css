@@ -23,6 +23,7 @@ p {
 a {
   text-decoration: none;
 }
+
 ul,
 li {
   padding: 0;
@@ -30,12 +31,20 @@ li {
   text-decoration: none;
   list-style: none;
 }
+
 button {
   margin: 0;
   padding: 0;
   border: inherit;
   border: 0;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -48,6 +57,8 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
 
 body {
   display: grid;
