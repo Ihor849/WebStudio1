@@ -82,6 +82,7 @@ body {
     display: flex;
     margin-left: 43px;
     font-size: 14px;
+    
   }
 
   .item-adress {
@@ -108,6 +109,7 @@ body {
 .item-nav {
   padding: 25px;
   cursor: pointer;
+  
   a {
     color: var(--font-color-title);
   }
@@ -115,6 +117,7 @@ body {
 .item-nav:hover {
   a {
     color: var(--color-hover);
+    transition: color 550ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -129,7 +132,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2f303a;
+  background-image: linear-gradient(to right, rgba(49, 47, 58, 0.4), rgba(49, 47, 58, 0.4)), url(../images/hero.jpg);
 
   .title-hero {
     text-align: center;
@@ -145,15 +148,22 @@ body {
     border-radius: 4px;
     background-color: var(--logo-color1);
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
     .link-hero {
-      font-size: 16;
+      font-size: 16px;
       font-weight: bold;
       color: #ffffff;
       padding: 10px 32px;
+
+    
     }
   }
   .button-link-hero:hover {
     background-color: #188ce8;
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
   }
 }
 
@@ -278,8 +288,12 @@ body {
 
 
   .item-adress {
-    color: #757575;
+    color: #ffffff;
     font-size: 14px;
     line-height: 1.71;
+  }
+  [href="mailto:info@devstudio.com"],
+  [href="tel:+38 096 111 11 11"] {
+    color: hsla(0, 0%, 100%, 0.3);
   }
 }
